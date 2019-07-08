@@ -1,9 +1,9 @@
-'use strict';
-var expect = require('chai').expect;
-let { AirParser } = require('../js/main.js');
+import { expect } from 'chai';
+import AirParser from './main';
+const fs = require('fs');
 
 //TO-DO: Write test for each shape and slide number and confirm
-let pptParser = new AirParser('./sample.pptx');
+let pptParser = new AirParser(new File([''], './tests/sample.pptx'));
 
 waitForParsing();
 
